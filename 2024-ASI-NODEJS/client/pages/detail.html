@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails</title>
+    <link rel="stylesheet" href="../assets/style/detail.css">
+</head>
+<body>
+    <a href="./livre.html" class ="lien">Liste des livres</a>
+    <h1>Détails sur le livre</h1>
+    <!-- div.container>div.row*2>div.col-6*2>div.form-group>label.form-label+input.form-control -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="nom" class="form-label">nom</label>
+                    <input type="text" id="nom" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="genre" class="form-label">genre</label>
+                    <input type="text" id="genre" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="pays" class="form-label">pays</label>
+                    <input type="text" id="pays" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="date" class="form-label">date</label>
+                    <input type="text" id="date" class="form-control">
+                </div>
+            </div>
+        </div>
+       
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <button class="btn btn-outline-success" id="modif">Modifier</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="../assets/js/detail.js" defer></script>
+</body>
+</html>
