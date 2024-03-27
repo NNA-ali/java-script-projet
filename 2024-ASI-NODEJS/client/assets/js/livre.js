@@ -4,10 +4,10 @@ function addLivre() {
     let genre = document.querySelector('#genre');
     let pays = document.querySelector('#pays');
     let date = document.querySelector('#date');
-    // let  = document.querySelector('#');
+    
 
 
-    // Un objet temporaire livre respectant le schéma définit plus tot
+    
     let tmp = {
         nom: nom.value,
         genre: genre.value,
@@ -16,6 +16,8 @@ function addLivre() {
       
     };
 
+
+    
 
     let url = '/livre';
 
@@ -132,11 +134,13 @@ fetch(url, options)
         }
     })
     .then((response) => {
+        console.log(response); // Ajoutez cette ligne pour voir le contenu de la réponse
         response.forEach((elt) => {
             elt.date = String(elt.date).slice(0,10);
             addOneLine(elt);
         });
     })
+    
     .catch((err) => {
         console.log('Error :', err);
     })

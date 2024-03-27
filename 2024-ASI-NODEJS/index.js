@@ -1,13 +1,14 @@
 //const http = require('http');
-//let app = express();
+
 const express = require('express');
 let app = express();
-const Liste = require('../../../data/liste');
+
 let port = 3000;
 const mongoose = require('mongoose');
 const uri = 'mongodb://127.0.0.1:27017/livre';
 let promise = mongoose.connect(uri);
-const Livre = require('../../../model/livre.model');
+const Livre = require('./model/livre.model');
+
 
 promise.then((db) => {
     console.log('DB connected');
@@ -27,9 +28,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/index.html');
 });
 
-app.get('/liste', (req, res) => {
-    res.send(Liste);
-});
+
 app.post('/livre', (req, res) => {
     let newLivre = new Livre(req.body);
     newLivre.save()
